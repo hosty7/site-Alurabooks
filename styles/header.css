@@ -1,0 +1,143 @@
+.cabeçalhoMenuHamburguer {
+    width: 24px;
+    height: 24px;
+    background-image: url("../imagens/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.containerBotao:checked ~ .containerRotulo > .cabeçalhoMenuHamburguer {
+    background-image: url("../imagens/MenuAberto.svg");
+}
+
+.cabeçalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.containerImagem {
+    padding: 1em;
+}
+
+.listaMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.containerBotao:checked ~ .listaMenu {
+    display: block;
+}
+
+.listaMenuTitulo, .listaMenuItem {
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.listaMenuTitulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.listaMenuLink {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.containerBotao {
+    display: none;
+}
+
+.containerTitulo {
+    display: none;
+}
+
+.opcoes {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .containerTitulo, .containerTituloNegrito {
+        font-family: var(--fonte-secundario);
+        font-size: 30px;
+    }
+
+    .containerTitulo {
+        font-weight: 400;
+        display: block;
+    }
+
+    .containerTituloNegrito {
+        font-weight: 700;
+    }
+
+    .opcoes {
+        display: flex;
+    }
+
+    .containerTexto {
+        display: none;
+    }
+
+    .opcoesItem {
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+
+    .opcoesLink {
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .containerImagemTransparente {
+        display: none;
+    }
+
+    .cabeçalhoMenuHamburguer {
+        display: none;
+    }
+
+    .opcoesBotao:checked~.listaMenu {
+        display: block;
+        width: auto;
+    }
+
+    .opcoesBotao {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 1728px) {
+    .containerLink {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .cabeçalho {
+        padding: 0 2em;
+    }
+
+    .opcoes {
+        margin-right: auto;
+    }
+
+    .containerTexto {
+        display: block;
+    }
+}
